@@ -34,7 +34,7 @@ from org.bitcoinj.core import *
 
 import org.bitcoinj.crypto.KeyCrypterException
 import org.bitcoinj.params.MainNetParams
-from org.bitcoinj.kits import WalletAppKit
+from org.bitcoinzj.kits import WalletAppKit
 
 from com.google.common.util.concurrent import FutureCallback
 from com.google.common.util.concurrent import Futures
