@@ -70,6 +70,20 @@ public class BCCTest {
 
         System.out.println(Utils.HEX.encode(tx.bitcoinSerialize()));
 
+        scriptSig = ScriptBuilder.createP2SHMultiSigInputScript(null, redeemScript);
+
+        for (int i = 0; i < keys.size(); i++) {
+            ECKey key = keys.get(i);
+            Sha256Hash hash = tx.hashForSignature(0, redeemScript, Transaction.SigHash.ALL, false, 100000000L);
+            ECKey.ECDSASignature sig = key.sign(hash);
+            TransactionSignature signature = new TransactionSignature(sig, Transaction.SigHash.ALL, false, true);
+
+            scriptSig = ScriptBuilder.updateScriptWithSignature(scriptSig, signature.encodeToBitcoin(), i, 1, 1);
+        }
+        tx.getInput(0).setScriptSig(scriptSig);
+
+        System.out.println(Utils.HEX.encode(tx.bitcoinSerialize()));
+
         // TODO: This will fail. org.bitcoincashj.script.Script.executeMultiSig() should be updated
         // tx.getInput(0).verify(output);
     }
