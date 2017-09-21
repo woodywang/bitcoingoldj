@@ -14,7 +14,7 @@ Be sure you have already installed JCE Unlimited Strength Jurisdiction Policy Fi
 
 ### FAQ
 
-## How to sign Bitcoin Cash transaciton
+#### How to sign Bitcoin Cash transaciton
 ```
 // Sign an input whose value is 5 BCCs
 Sha256Hash hash = tx.hashForSignature(i, scriptPubKey, Transaction.SigHash.ALL, false, 500000000L);
