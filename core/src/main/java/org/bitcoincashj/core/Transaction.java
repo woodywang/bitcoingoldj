@@ -904,8 +904,9 @@ public class Transaction extends ChildMessage {
     public TransactionSignature calculateSignature(int inputIndex, ECKey key,
                                                                 byte[] redeemScript,
                                                                 SigHash hashType, boolean anyoneCanPay) {
-        Sha256Hash hash = hashForSignature(inputIndex, redeemScript, hashType, anyoneCanPay);
-        return new TransactionSignature(key.sign(hash), hashType, anyoneCanPay);
+        TransactionInput input = inputs.get(inputIndex);
+        Sha256Hash hash = hashForSignature(inputIndex, new Script(redeemScript), hashType, anyoneCanPay, input.getValue().value);
+        return new TransactionSignature(key.sign(hash), hashType, anyoneCanPay, true);
     }
 
     /**
