@@ -904,8 +904,7 @@ public class Transaction extends ChildMessage {
     public TransactionSignature calculateSignature(int inputIndex, ECKey key,
                                                                 byte[] redeemScript,
                                                                 SigHash hashType, boolean anyoneCanPay) {
-        TransactionInput input = inputs.get(inputIndex);
-        Sha256Hash hash = hashForSignature(inputIndex, new Script(redeemScript), hashType, anyoneCanPay, input.getValue().value);
+        Sha256Hash hash = hashForSignature(inputIndex, redeemScript, hashType, anyoneCanPay);
         return new TransactionSignature(key.sign(hash), hashType, anyoneCanPay, true);
     }
 
@@ -987,8 +986,8 @@ public class Transaction extends ChildMessage {
      */
     public Sha256Hash hashForSignature(int inputIndex, byte[] redeemScript,
                                                     SigHash type, boolean anyoneCanPay) {
-        byte sigHashType = (byte) TransactionSignature.calcSigHashValue(type, anyoneCanPay);
-        return hashForSignature(inputIndex, redeemScript, sigHashType);
+        int sigHashType = TransactionSignature.calcSigHashValue(type, anyoneCanPay, true);
+        return hashForSignature(inputIndex, new Script(redeemScript), sigHashType);
     }
 
     /**
@@ -1007,8 +1006,8 @@ public class Transaction extends ChildMessage {
      */
     public Sha256Hash hashForSignature(int inputIndex, Script redeemScript,
                                                     SigHash type, boolean anyoneCanPay) {
-        int sigHash = TransactionSignature.calcSigHashValue(type, anyoneCanPay);
-        return hashForSignature(inputIndex, redeemScript.getProgram(), (byte) sigHash);
+        int sigHash = TransactionSignature.calcSigHashValue(type, anyoneCanPay, true);
+        return hashForSignature(inputIndex, redeemScript, sigHash);
     }
 
     /**
@@ -1020,13 +1019,12 @@ public class Transaction extends ChildMessage {
      * @param inputIndex input the signature is being calculated for. Tx signatures are always relative to an input.
      * @param redeemScript the script that should be in the given input during signing.
      * @param sigHashType Should be SigHash.ALL
-     * @param anyoneCanPay should be false.
-     * @param inputValue the inputIndex-th input value. Unit: satoshi
      * @return
      */
-    public Sha256Hash hashForSignature(int inputIndex, Script redeemScript, SigHash sigHashType, boolean anyoneCanPay, long inputValue) {
-        int sigHash = TransactionSignature.calcSigHashValue(sigHashType, anyoneCanPay);
-        sigHash |= SIGHASH_FORKID;
+    public Sha256Hash hashForSignature(int inputIndex, Script redeemScript, int sigHashType) {
+        // Amount of bitcoin spent in the input.
+        // Note: you get a null (Coin) with tx.get(inputIndex), after copying this transaction
+        long amount = this.inputs.get(inputIndex).getValue().value;
 
         // Create a copy of this transaction to operate upon because we need make changes to the inputs and outputs.
         // It would not be thread-safe to change the attributes of the transaction object itself.
@@ -1050,17 +1048,17 @@ public class Transaction extends ChildMessage {
         Sha256Hash hashOutputs = Sha256Hash.ZERO_HASH;
 
         try {
-            if ((sigHash & SigHash.ANYONECANPAY.value) == 0) {
+            if ((sigHashType & SigHash.ANYONECANPAY.value) == 0) {
                 hashPrevouts = getPrevoutHash(tx);
             }
 
-            if ((sigHash & SigHash.ANYONECANPAY.value) == 0 && (sigHash & 0x1F) != SigHash.SINGLE.value && (sigHash & 0x1F) != SigHash.NONE.value) {
+            if ((sigHashType & SigHash.ANYONECANPAY.value) == 0 && (sigHashType & 0x1F) != SigHash.SINGLE.value && (sigHashType & 0x1F) != SigHash.NONE.value) {
                 hashSequence = getSequenceHash(tx);
             }
 
-            if ((sigHash & 0x1F) != SigHash.SINGLE.value && (sigHash & 0x1F) != SigHash.NONE.value) {
+            if ((sigHashType & 0x1F) != SigHash.SINGLE.value && (sigHashType & 0x1F) != SigHash.NONE.value) {
                 hashOutputs = getOutputsHash(tx);
-            } else if ((sigHash & 0x1F) == SigHash.SINGLE.value && inputIndex < tx.getOutputs().size()) {
+            } else if ((sigHashType & 0x1F) == SigHash.SINGLE.value && inputIndex < tx.getOutputs().size()) {
                 hashOutputs = Sha256Hash.twiceOf(tx.getOutputs().get(inputIndex).bitcoinSerialize());
             }
 
@@ -1072,115 +1070,25 @@ public class Transaction extends ChildMessage {
             // The input being signed (replacing the scriptSig with scriptCode +
             // amount). The prevout may already be contained in hashPrevout, and the
             // nSequence may already be contain in hashSequence.
-            tx.getInput(inputIndex).getOutpoint().bitcoinSerializeToStream(baos);
+            input.getOutpoint().bitcoinSerializeToStream(baos);
 
             baos.write(new VarInt(connectedScript.length).encode());
             baos.write(connectedScript);
-            uint64ToByteStreamLE(BigInteger.valueOf(inputValue), baos);
-            uint32ToByteStreamLE(tx.inputs.get(inputIndex).getSequenceNumber(), baos);
+            uint64ToByteStreamLE(BigInteger.valueOf(amount), baos);
+            uint32ToByteStreamLE(input.getSequenceNumber(), baos);
 
             // Outputs (none/one/all, depending on flags)
             baos.write(hashOutputs.getBytes());
 
             // Locktime
             uint32ToByteStreamLE(tx.lockTime, baos);
-            uint32ToByteStreamLE(0x000000ff & sigHash, baos);
+            uint32ToByteStreamLE(0x000000ff & sigHashType, baos);
 
             Sha256Hash hash = Sha256Hash.twiceOf(baos.toByteArray());
             baos.close();
             return hash;
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
-    }
-
-    /**
-     * This is required for signatures which use a sigHashType which cannot be represented using SigHash and anyoneCanPay
-     * See transaction c99c49da4c38af669dea436d3e73780dfdb6c1ecf9958baa52960e8baee30e73, which has sigHashType 0
-     */
-    public Sha256Hash hashForSignature(int inputIndex, byte[] connectedScript, byte sigHashType) {
-        // The SIGHASH flags are used in the design of contracts, please see this page for a further understanding of
-        // the purposes of the code in this method:
-        //
-        //   https://en.bitcoin.it/wiki/Contracts
-
-        try {
-            // Create a copy of this transaction to operate upon because we need make changes to the inputs and outputs.
-            // It would not be thread-safe to change the attributes of the transaction object itself.
-            Transaction tx = this.params.getDefaultSerializer().makeTransaction(this.bitcoinSerialize());
-
-            // Clear input scripts in preparation for signing. If we're signing a fresh
-            // transaction that step isn't very helpful, but it doesn't add much cost relative to the actual
-            // EC math so we'll do it anyway.
-            for (int i = 0; i < tx.inputs.size(); i++) {
-                tx.inputs.get(i).clearScriptBytes();
-            }
-
-            // This step has no purpose beyond being synchronized with Bitcoin Core's bugs. OP_CODESEPARATOR
-            // is a legacy holdover from a previous, broken design of executing scripts that shipped in Bitcoin 0.1.
-            // It was seriously flawed and would have let anyone take anyone elses money. Later versions switched to
-            // the design we use today where scripts are executed independently but share a stack. This left the
-            // OP_CODESEPARATOR instruction having no purpose as it was only meant to be used internally, not actually
-            // ever put into scripts. Deleting OP_CODESEPARATOR is a step that should never be required but if we don't
-            // do it, we could split off the main chain.
-            connectedScript = Script.removeAllInstancesOfOp(connectedScript, ScriptOpCodes.OP_CODESEPARATOR);
-
-            // Set the input to the script of its output. Bitcoin Core does this but the step has no obvious purpose as
-            // the signature covers the hash of the prevout transaction which obviously includes the output script
-            // already. Perhaps it felt safer to him in some way, or is another leftover from how the code was written.
-            TransactionInput input = tx.inputs.get(inputIndex);
-            input.setScriptBytes(connectedScript);
-
-            if ((sigHashType & 0x1f) == SigHash.NONE.value) {
-                // SIGHASH_NONE means no outputs are signed at all - the signature is effectively for a "blank cheque".
-                tx.outputs = new ArrayList<>(0);
-                // The signature isn't broken by new versions of the transaction issued by other parties.
-                for (int i = 0; i < tx.inputs.size(); i++)
-                    if (i != inputIndex)
-                        tx.inputs.get(i).setSequenceNumber(0);
-            } else if ((sigHashType & 0x1f) == SigHash.SINGLE.value) {
-                // SIGHASH_SINGLE means only sign the output at the same index as the input (ie, my output).
-                if (inputIndex >= tx.outputs.size()) {
-                    // The input index is beyond the number of outputs, it's a buggy signature made by a broken
-                    // Bitcoin implementation. Bitcoin Core also contains a bug in handling this case:
-                    // any transaction output that is signed in this case will result in both the signed output
-                    // and any future outputs to this public key being steal-able by anyone who has
-                    // the resulting signature and the public key (both of which are part of the signed tx input).
-
-                    // Bitcoin Core's bug is that SignatureHash was supposed to return a hash and on this codepath it
-                    // actually returns the constant "1" to indicate an error, which is never checked for. Oops.
-                    return Sha256Hash.wrap("0100000000000000000000000000000000000000000000000000000000000000");
-                }
-                // In SIGHASH_SINGLE the outputs after the matching input index are deleted, and the outputs before
-                // that position are "nulled out". Unintuitively, the value in a "null" transaction is set to -1.
-                tx.outputs = new ArrayList<>(tx.outputs.subList(0, inputIndex + 1));
-                for (int i = 0; i < inputIndex; i++)
-                    tx.outputs.set(i, new TransactionOutput(tx.params, tx, Coin.NEGATIVE_SATOSHI, new byte[] {}));
-                // The signature isn't broken by new versions of the transaction issued by other parties.
-                for (int i = 0; i < tx.inputs.size(); i++)
-                    if (i != inputIndex)
-                        tx.inputs.get(i).setSequenceNumber(0);
-            }
-
-            if ((sigHashType & SigHash.ANYONECANPAY.value) == SigHash.ANYONECANPAY.value) {
-                // SIGHASH_ANYONECANPAY means the signature in the input is not broken by changes/additions/removals
-                // of other inputs. For example, this is useful for building assurance contracts.
-                tx.inputs = new ArrayList<TransactionInput>();
-                tx.inputs.add(input);
-            }
-
-            ByteArrayOutputStream bos = new UnsafeByteArrayOutputStream(tx.length == UNKNOWN_LENGTH ? 256 : tx.length + 4);
-            tx.bitcoinSerialize(bos);
-            // We also have to write a hash type (sigHashType is actually an unsigned char)
-            uint32ToByteStreamLE(0x000000ff & sigHashType, bos);
-            // Note that this is NOT reversed to ensure it will be signed correctly. If it were to be printed out
-            // however then we would expect that it is IS reversed.
-            Sha256Hash hash = Sha256Hash.twiceOf(bos.toByteArray());
-            bos.close();
-
-            return hash;
-        } catch (IOException e) {
-            throw new RuntimeException(e);  // Cannot happen.
         }
     }
 
