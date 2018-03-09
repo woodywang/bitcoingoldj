@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.testing;
+package org.bitcoingoldj.testing;
 
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.WalletExtension;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.WalletExtension;
 
 import java.util.Arrays;
 

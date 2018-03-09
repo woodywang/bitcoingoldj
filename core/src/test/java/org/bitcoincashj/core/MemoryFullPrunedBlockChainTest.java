@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.store.BlockStoreException;
-import org.bitcoincashj.store.FullPrunedBlockStore;
-import org.bitcoincashj.store.MemoryFullPrunedBlockStore;
+import org.bitcoingoldj.store.BlockStoreException;
+import org.bitcoingoldj.store.FullPrunedBlockStore;
+import org.bitcoingoldj.store.MemoryFullPrunedBlockStore;
 
 /**
  * A MemoryStore implementation of the FullPrunedBlockStoreTest

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import com.google.common.collect.ImmutableList;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.testing.TestWithWallet;
-import org.bitcoincashj.wallet.SendRequest;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.testing.TestWithWallet;
+import org.bitcoingoldj.wallet.SendRequest;
 import org.hamcrest.CoreMatchers;
 import org.junit.After;
 import org.junit.Before;

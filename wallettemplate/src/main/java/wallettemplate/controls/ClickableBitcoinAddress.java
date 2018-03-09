@@ -16,8 +16,8 @@
 
 package wallettemplate.controls;
 
-import org.bitcoincashj.core.Address;
-import org.bitcoincashj.uri.BitcoinURI;
+import org.bitcoingoldj.core.Address;
+import org.bitcoingoldj.uri.BitcoinURI;
 import de.jensd.fx.fontawesome.AwesomeDude;
 import de.jensd.fx.fontawesome.AwesomeIcon;
 import javafx.beans.binding.StringExpression;

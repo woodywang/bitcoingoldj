@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.crypto;
+package org.bitcoingoldj.crypto;
 
-import org.bitcoincashj.core.Base58;
+import org.bitcoingoldj.core.Base58;
 import com.google.common.base.Functions;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.params.MainNetParams;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.params.MainNetParams;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-import static org.bitcoincashj.core.Utils.HEX;
+import static org.bitcoingoldj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 
 /**

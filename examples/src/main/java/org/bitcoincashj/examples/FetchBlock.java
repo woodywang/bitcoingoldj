@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.store.BlockStore;
-import org.bitcoincashj.store.MemoryBlockStore;
-import org.bitcoincashj.utils.BriefLogFormatter;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.store.BlockStore;
+import org.bitcoingoldj.store.MemoryBlockStore;
+import org.bitcoingoldj.utils.BriefLogFormatter;
 
 import java.net.InetAddress;
 import java.util.concurrent.Future;

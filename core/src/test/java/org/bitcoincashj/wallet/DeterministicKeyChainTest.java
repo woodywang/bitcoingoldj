@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.wallet;
+package org.bitcoingoldj.wallet;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.crypto.*;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.listeners.AbstractKeyChainEventListener;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.crypto.*;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.listeners.AbstractKeyChainEventListener;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;

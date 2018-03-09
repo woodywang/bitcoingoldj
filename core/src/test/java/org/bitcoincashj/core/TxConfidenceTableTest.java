@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.params.*;
-import org.bitcoincashj.testing.*;
-import org.bitcoincashj.utils.*;
+import org.bitcoingoldj.params.*;
+import org.bitcoingoldj.testing.*;
+import org.bitcoingoldj.utils.*;
 import org.junit.*;
 
 import java.net.*;
 
-import static org.bitcoincashj.core.Coin.*;
+import static org.bitcoingoldj.core.Coin.*;
 import static org.junit.Assert.*;
 
 public class TxConfidenceTableTest {

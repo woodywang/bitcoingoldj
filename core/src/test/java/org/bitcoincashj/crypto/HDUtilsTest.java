@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.crypto;
+package org.bitcoingoldj.crypto;
 
 import com.google.common.collect.ImmutableList;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.bitcoincashj.core.Utils.HEX;
+import static org.bitcoingoldj.core.Utils.HEX;
 import java.util.List;
 
 public class HDUtilsTest {

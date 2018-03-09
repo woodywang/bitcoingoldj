@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.TestNet3Params;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.TestNet3Params;
 import org.junit.Test;
 
-import static org.bitcoincashj.core.Utils.HEX;
+import static org.bitcoingoldj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;

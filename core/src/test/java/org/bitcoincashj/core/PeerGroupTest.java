@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.*;
 import com.google.common.net.*;
 import com.google.common.util.concurrent.*;
-import org.bitcoincashj.core.listeners.*;
-import org.bitcoincashj.net.discovery.*;
-import org.bitcoincashj.testing.*;
-import org.bitcoincashj.utils.*;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.listeners.*;
+import org.bitcoingoldj.net.discovery.*;
+import org.bitcoingoldj.testing.*;
+import org.bitcoingoldj.utils.*;
+import org.bitcoingoldj.wallet.Wallet;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -36,7 +36,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
 
-import static org.bitcoincashj.core.Coin.*;
+import static org.bitcoingoldj.core.Coin.*;
 import static org.junit.Assert.*;
 
 

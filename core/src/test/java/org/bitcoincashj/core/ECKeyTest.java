@@ -15,25 +15,25 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.core.ECKey.ECDSASignature;
-import org.bitcoincashj.crypto.EncryptedData;
-import org.bitcoincashj.crypto.KeyCrypter;
-import org.bitcoincashj.crypto.KeyCrypterScrypt;
-import org.bitcoincashj.crypto.TransactionSignature;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.utils.BriefLogFormatter;
+import org.bitcoingoldj.core.ECKey.ECDSASignature;
+import org.bitcoingoldj.crypto.EncryptedData;
+import org.bitcoingoldj.crypto.KeyCrypter;
+import org.bitcoingoldj.crypto.KeyCrypterScrypt;
+import org.bitcoingoldj.crypto.TransactionSignature;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.protobuf.ByteString;
-import org.bitcoincashj.wallet.Protos;
-import org.bitcoincashj.wallet.Protos.ScryptParameters;
+import org.bitcoingoldj.wallet.Protos;
+import org.bitcoingoldj.wallet.Protos.ScryptParameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -49,8 +49,8 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 
-import static org.bitcoincashj.core.Utils.HEX;
-import static org.bitcoincashj.core.Utils.reverseBytes;
+import static org.bitcoingoldj.core.Utils.HEX;
+import static org.bitcoingoldj.core.Utils.reverseBytes;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

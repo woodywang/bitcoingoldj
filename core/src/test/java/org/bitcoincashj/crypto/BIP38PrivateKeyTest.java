@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.crypto;
+package org.bitcoingoldj.crypto;
 
-import org.bitcoincashj.core.ECKey;
-import org.bitcoincashj.crypto.BIP38PrivateKey.BadPassphraseException;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.TestNet3Params;
+import org.bitcoingoldj.core.ECKey;
+import org.bitcoingoldj.crypto.BIP38PrivateKey.BadPassphraseException;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.TestNet3Params;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;

@@ -15,32 +15,32 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.store;
+package org.bitcoingoldj.store;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.core.Transaction.Purpose;
-import org.bitcoincashj.core.TransactionConfidence.ConfidenceType;
-import org.bitcoincashj.crypto.DeterministicKey;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.testing.FakeTxBuilder;
-import org.bitcoincashj.testing.FooWalletExtension;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.DeterministicKeyChain;
-import org.bitcoincashj.wallet.KeyChain;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.core.Transaction.Purpose;
+import org.bitcoingoldj.core.TransactionConfidence.ConfidenceType;
+import org.bitcoingoldj.crypto.DeterministicKey;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.testing.FakeTxBuilder;
+import org.bitcoingoldj.testing.FooWalletExtension;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.DeterministicKeyChain;
+import org.bitcoingoldj.wallet.KeyChain;
 import com.google.protobuf.ByteString;
 
-import org.bitcoincashj.wallet.MarriedKeyChain;
-import org.bitcoincashj.wallet.Protos;
-import org.bitcoincashj.wallet.UnreadableWalletException;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.WalletExtension;
-import org.bitcoincashj.wallet.WalletProtobufSerializer;
-import org.bitcoincashj.wallet.WalletTransaction;
-import org.bitcoincashj.wallet.WalletTransaction.Pool;
-import org.bitcoincashj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.bitcoingoldj.wallet.MarriedKeyChain;
+import org.bitcoingoldj.wallet.Protos;
+import org.bitcoingoldj.wallet.UnreadableWalletException;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.WalletExtension;
+import org.bitcoingoldj.wallet.WalletProtobufSerializer;
+import org.bitcoingoldj.wallet.WalletTransaction;
+import org.bitcoingoldj.wallet.WalletTransaction.Pool;
+import org.bitcoingoldj.wallet.listeners.WalletCoinsReceivedEventListener;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -54,8 +54,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.testing.FakeTxBuilder.createFakeTx;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 

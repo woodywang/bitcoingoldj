@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.protocols.channels;
+package org.bitcoingoldj.protocols.channels;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.protocols.channels.PaymentChannelClient.VersionSelector;
-import org.bitcoincashj.testing.TestWithWallet;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.WalletExtension;
-import org.bitcoincashj.wallet.WalletFiles;
-import org.bitcoincashj.wallet.WalletProtobufSerializer;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.protocols.channels.PaymentChannelClient.VersionSelector;
+import org.bitcoingoldj.testing.TestWithWallet;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.WalletExtension;
+import org.bitcoingoldj.wallet.WalletFiles;
+import org.bitcoingoldj.wallet.WalletProtobufSerializer;
 
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
-import org.bitcoincash.paymentchannel.Protos;
+import org.bitcoingold.paymentchannel.Protos;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -48,11 +48,11 @@ import java.util.Collection;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.protocols.channels.PaymentChannelClient.VersionSelector.*;
-import static org.bitcoincashj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import static org.bitcoincashj.testing.FakeTxBuilder.createFakeBlock;
-import static org.bitcoincash.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.protocols.channels.PaymentChannelClient.VersionSelector.*;
+import static org.bitcoingoldj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import static org.bitcoingoldj.testing.FakeTxBuilder.createFakeBlock;
+import static org.bitcoingold.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
@@ -557,7 +557,7 @@ public class ChannelConnectionTest extends TestWithWallet {
     private static Wallet roundTripClientWallet(Wallet wallet) throws Exception {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
-        org.bitcoincashj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.bitcoingoldj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         StoredPaymentChannelClientStates state = new StoredPaymentChannelClientStates(null, failBroadcaster);
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
@@ -566,7 +566,7 @@ public class ChannelConnectionTest extends TestWithWallet {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
         StoredPaymentChannelServerStates state = new StoredPaymentChannelServerStates(null, failBroadcaster);
-        org.bitcoincashj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.bitcoingoldj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
 

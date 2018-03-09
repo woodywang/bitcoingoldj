@@ -1,10 +1,10 @@
-package org.bitcoincash.crawler;
+package org.bitcoingold.crawler;
 
 //
 // A simple protocol for describing signed sets of IP addresses. Intended to be distributed via HTTP[S] or in files.
 //
 
-option java_package = "org.bitcoincash.crawler";
+option java_package = "org.bitcoingold.crawler";
 option java_outer_classname = "PeerSeedProtos";
 
 message PeerSeedData {

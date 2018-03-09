@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import com.google.common.base.*;
 import com.google.common.collect.*;
 import com.google.common.util.concurrent.*;
-import org.bitcoincashj.core.listeners.*;
-import org.bitcoincashj.net.*;
-import org.bitcoincashj.params.*;
-import org.bitcoincashj.store.*;
-import org.bitcoincashj.utils.*;
+import org.bitcoingoldj.core.listeners.*;
+import org.bitcoingoldj.net.*;
+import org.bitcoingoldj.params.*;
+import org.bitcoingoldj.store.*;
+import org.bitcoingoldj.utils.*;
 import org.slf4j.*;
 
 import java.io.*;
@@ -33,8 +33,8 @@ import java.util.*;
 import java.util.concurrent.atomic.*;
 
 /**
- * A tool for comparing the blocks which are accepted/rejected by bitcoind/bitcoincashj
- * It is designed to run as a testnet-in-a-box network between a single bitcoind node and bitcoincashj
+ * A tool for comparing the blocks which are accepted/rejected by bitcoind/bitcoingoldj
+ * It is designed to run as a testnet-in-a-box network between a single bitcoind node and bitcoingoldj
  * It is not an automated unit-test because it requires a bit more set-up...read comments below
  */
 public class BitcoindComparisonTool {
@@ -302,7 +302,7 @@ public class BitcoindComparisonTool {
                 bitcoind.ping().get();
                 if (!chain.getChainHead().getHeader().getHash().equals(bitcoindChainHead)) {
                     rulesSinceFirstFail++;
-                    log.error("ERROR: bitcoind and bitcoincashj acceptance differs on block \"" + block.ruleName + "\"");
+                    log.error("ERROR: bitcoind and bitcoingoldj acceptance differs on block \"" + block.ruleName + "\"");
                 }
                 if (block.sendOnce)
                     preloadedBlocks.remove(nextBlock.getHash());

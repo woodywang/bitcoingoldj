@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
 import java.io.File;
 
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.wallet.Wallet;
 
 /**
  * DumpWallet loads a serialized wallet and prints information about what it contains.

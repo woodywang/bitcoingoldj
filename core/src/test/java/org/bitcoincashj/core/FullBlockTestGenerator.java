@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import org.bitcoincashj.core.Transaction.SigHash;
-import org.bitcoincashj.crypto.TransactionSignature;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.script.ScriptBuilder;
+import org.bitcoingoldj.core.Transaction.SigHash;
+import org.bitcoingoldj.crypto.TransactionSignature;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.script.ScriptBuilder;
 import com.google.common.base.Preconditions;
 
 import javax.annotation.Nullable;
@@ -32,8 +32,8 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.script.ScriptOpCodes.*;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 

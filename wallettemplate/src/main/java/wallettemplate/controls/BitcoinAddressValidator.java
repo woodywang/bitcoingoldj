@@ -16,9 +16,9 @@
 
 package wallettemplate.controls;
 
-import org.bitcoincashj.core.Address;
-import org.bitcoincashj.core.AddressFormatException;
-import org.bitcoincashj.core.NetworkParameters;
+import org.bitcoingoldj.core.Address;
+import org.bitcoingoldj.core.AddressFormatException;
+import org.bitcoingoldj.core.NetworkParameters;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import wallettemplate.utils.TextFieldValidator;

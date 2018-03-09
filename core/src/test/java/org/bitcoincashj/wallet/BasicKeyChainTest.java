@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.wallet;
+package org.bitcoingoldj.wallet;
 
-import org.bitcoincashj.core.BloomFilter;
-import org.bitcoincashj.core.ECKey;
-import org.bitcoincashj.core.Utils;
-import org.bitcoincashj.crypto.KeyCrypter;
-import org.bitcoincashj.crypto.KeyCrypterException;
-import org.bitcoincashj.crypto.KeyCrypterScrypt;
-import org.bitcoincashj.utils.Threading;
+import org.bitcoingoldj.core.BloomFilter;
+import org.bitcoingoldj.core.ECKey;
+import org.bitcoingoldj.core.Utils;
+import org.bitcoingoldj.crypto.KeyCrypter;
+import org.bitcoingoldj.crypto.KeyCrypterException;
+import org.bitcoingoldj.crypto.KeyCrypterScrypt;
+import org.bitcoingoldj.utils.Threading;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
-import org.bitcoincashj.wallet.listeners.AbstractKeyChainEventListener;
+import org.bitcoingoldj.wallet.listeners.AbstractKeyChainEventListener;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.store.BlockStoreException;
-import org.bitcoincashj.store.FullPrunedBlockStore;
-import org.bitcoincashj.store.LevelDBFullPrunedBlockStore;
+import org.bitcoingoldj.store.BlockStoreException;
+import org.bitcoingoldj.store.FullPrunedBlockStore;
+import org.bitcoingoldj.store.LevelDBFullPrunedBlockStore;
 import org.junit.After;
 
 import java.io.File;

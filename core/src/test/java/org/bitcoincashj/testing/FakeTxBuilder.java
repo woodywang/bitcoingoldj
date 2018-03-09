@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.testing;
+package org.bitcoingoldj.testing;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.crypto.TransactionSignature;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.store.BlockStore;
-import org.bitcoincashj.store.BlockStoreException;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.crypto.TransactionSignature;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.store.BlockStore;
+import org.bitcoingoldj.store.BlockStoreException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Random;
 
-import static org.bitcoincashj.core.Coin.*;
+import static org.bitcoingoldj.core.Coin.*;
 import static com.google.common.base.Preconditions.checkState;
 
 public class FakeTxBuilder {

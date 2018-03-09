@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.testing;
+package org.bitcoingoldj.testing;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

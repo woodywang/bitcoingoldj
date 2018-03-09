@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.TestNet2Params;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.store.BlockStore;
-import org.bitcoincashj.store.MemoryBlockStore;
-import org.bitcoincashj.testing.FakeTxBuilder;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.Wallet.BalanceType;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.TestNet2Params;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.store.BlockStore;
+import org.bitcoingoldj.store.MemoryBlockStore;
+import org.bitcoingoldj.testing.FakeTxBuilder;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.Wallet.BalanceType;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import org.junit.rules.ExpectedException;
@@ -38,9 +38,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.testing.FakeTxBuilder.createFakeBlock;
-import static org.bitcoincashj.testing.FakeTxBuilder.createFakeTx;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.testing.FakeTxBuilder.createFakeBlock;
+import static org.bitcoingoldj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 
 // Handling of chain splits/reorgs are in ChainSplitTests.

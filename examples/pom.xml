@@ -19,21 +19,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>org.bitcoincashj</groupId>
-        <artifactId>bitcoincashj-parent</artifactId>
+        <groupId>org.bitcoingoldj</groupId>
+        <artifactId>bitcoingoldj-parent</artifactId>
         <version>0.15-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bitcoincashj-examples</artifactId>
+    <artifactId>bitcoingoldj-examples</artifactId>
 
-    <name>bitcoincashj Examples</name>
-    <description>A collection of examples using the bitcoincashj library</description>
+    <name>bitcoingoldj Examples</name>
+    <description>A collection of examples using the bitcoingoldj library</description>
 
     <dependencies>
         <dependency>
-            <groupId>org.bitcoincashj</groupId>
-            <artifactId>bitcoincashj-core</artifactId>
+            <groupId>org.bitcoingoldj</groupId>
+            <artifactId>bitcoingoldj-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.core.Utils;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.wallet.DeterministicSeed;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.core.Utils;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.wallet.DeterministicSeed;
+import org.bitcoingoldj.wallet.Wallet;
 
 /**
  * The following example shows you how to create a deterministic seed from a hierarchical deterministic wallet represented as a mnemonic code.

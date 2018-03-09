@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.params.UnitTestParams;
+import org.bitcoingoldj.params.UnitTestParams;
 import org.junit.Test;
 
 public class MessageTest {

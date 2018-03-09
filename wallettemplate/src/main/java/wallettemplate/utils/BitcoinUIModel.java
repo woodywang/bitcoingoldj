@@ -16,10 +16,10 @@
 
 package wallettemplate.utils;
 
-import org.bitcoincashj.core.listeners.DownloadProgressTracker;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.listeners.WalletChangeEventListener;
-import org.bitcoincashj.core.*;
+import org.bitcoingoldj.core.listeners.DownloadProgressTracker;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.listeners.WalletChangeEventListener;
+import org.bitcoingoldj.core.*;
 import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.beans.property.ReadOnlyObjectProperty;

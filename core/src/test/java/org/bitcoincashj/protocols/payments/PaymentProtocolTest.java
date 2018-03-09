@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.protocols.payments;
+package org.bitcoingoldj.protocols.payments;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.crypto.X509Utils;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.protocols.payments.PaymentProtocol.Output;
-import org.bitcoincashj.protocols.payments.PaymentProtocol.PkiVerificationData;
-import org.bitcoincashj.protocols.payments.PaymentProtocolException.PkiVerificationException;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.testing.FakeTxBuilder;
-import org.bitcoincash.protocols.payments.Protos;
-import org.bitcoincash.protocols.payments.Protos.Payment;
-import org.bitcoincash.protocols.payments.Protos.PaymentACK;
-import org.bitcoincash.protocols.payments.Protos.PaymentRequest;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.crypto.X509Utils;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.protocols.payments.PaymentProtocol.Output;
+import org.bitcoingoldj.protocols.payments.PaymentProtocol.PkiVerificationData;
+import org.bitcoingoldj.protocols.payments.PaymentProtocolException.PkiVerificationException;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.testing.FakeTxBuilder;
+import org.bitcoingold.protocols.payments.Protos;
+import org.bitcoingold.protocols.payments.Protos.Payment;
+import org.bitcoingold.protocols.payments.Protos.PaymentACK;
+import org.bitcoingold.protocols.payments.Protos.PaymentRequest;
 import org.junit.Before;
 import org.junit.Test;
 

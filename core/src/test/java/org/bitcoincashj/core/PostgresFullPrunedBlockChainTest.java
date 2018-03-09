@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.store.BlockStoreException;
-import org.bitcoincashj.store.FullPrunedBlockStore;
-import org.bitcoincashj.store.PostgresFullPrunedBlockStore;
+import org.bitcoingoldj.store.BlockStoreException;
+import org.bitcoingoldj.store.FullPrunedBlockStore;
+import org.bitcoingoldj.store.PostgresFullPrunedBlockStore;
 import org.junit.After;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -30,10 +30,10 @@ import org.junit.Test;
 public class PostgresFullPrunedBlockChainTest extends AbstractFullPrunedBlockChainTest
 {
     // Replace these with your postgres location/credentials and remove @Ignore to test
-    // You can set up a fresh postgres with the command: create user bitcoincashj superuser password 'password';
+    // You can set up a fresh postgres with the command: create user bitcoingoldj superuser password 'password';
     private static final String DB_HOSTNAME = "localhost";
     private static final String DB_NAME = "bitcoinj_test";
-    private static final String DB_USERNAME = "bitcoincashj";
+    private static final String DB_USERNAME = "bitcoingoldj";
     private static final String DB_PASSWORD = "password";
     private static final String DB_SCHEMA = "blockstore_schema";
 

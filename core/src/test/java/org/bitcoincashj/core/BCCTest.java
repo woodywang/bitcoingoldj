@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.crypto.TransactionSignature;
-import org.bitcoincashj.params.RegTestParams;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.script.ScriptBuilder;
+import org.bitcoingoldj.crypto.TransactionSignature;
+import org.bitcoingoldj.params.RegTestParams;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.script.ScriptBuilder;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -84,7 +84,7 @@ public class BCCTest {
 
         System.out.println(Utils.HEX.encode(tx.bitcoinSerialize()));
 
-        // TODO: This will fail. org.bitcoincashj.script.Script.executeMultiSig() should be updated
+        // TODO: This will fail. Script.executeMultiSig() should be updated
         // tx.getInput(0).verify(output);
     }
 
@@ -117,7 +117,7 @@ public class BCCTest {
 
         System.out.println(Utils.HEX.encode(tx.bitcoinSerialize()));
 
-        // TODO: This will fail. org.bitcoincashj.script.Script.executeCheckSig() should be updated
+        // TODO: This will fail. Script.executeCheckSig() should be updated
 //         tx.getInput(0).verify(output);
     }
 }

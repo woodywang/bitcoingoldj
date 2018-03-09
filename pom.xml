@@ -19,8 +19,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.bitcoincashj</groupId>
-  <artifactId>bitcoincashj-parent</artifactId>
+  <groupId>org.bitcoingoldj</groupId>
+  <artifactId>bitcoingoldj-parent</artifactId>
   <version>0.15-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -38,13 +38,13 @@
   </parent>
 
   <scm>
-    <connection>scm:git:https://github.com/woodywang/bitcoincashj</connection>
-    <developerConnection>scm:git:https://github.com/woodywang/bitcoincashj</developerConnection>
-    <url>scm:git:https://github.com/woodywang/bitcoincashj</url>
+    <connection>scm:git:https://github.com/woodywang/bitcoingoldj</connection>
+    <developerConnection>scm:git:https://github.com/woodywang/bitcoingoldj</developerConnection>
+    <url>scm:git:https://github.com/woodywang/bitcoingoldj</url>
   </scm>
 
-  <name>bitcoincashj Parent</name>
-  <description>Provides the common configuration for the BitCoinCashJ modules</description>
+  <name>bitcoingoldj Parent</name>
+  <description>Provides the common configuration for the bitcoingoldj modules</description>
   <url>http://www.bitcoinj.org/</url>
 
   <licenses>
@@ -58,7 +58,7 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/woodywang/bitcoincashj/issues</url>
+    <url>https://github.com/woodywang/bitcoingoldj/issues</url>
   </issueManagement>
 
   <distributionManagement>
@@ -183,7 +183,7 @@
         <artifactId>slf4j-api</artifactId>
         <version>1.7.20</version>
       </dependency>
-      <!-- bitcoincashj consumers are expected to provide their own SLF4J adapters
+      <!-- bitcoingoldj consumers are expected to provide their own SLF4J adapters
     such as logback, slf4j-log4j12, slf4j-jcl and so on
     see http://www.slf4j.org/faq.html -->
       <dependency>

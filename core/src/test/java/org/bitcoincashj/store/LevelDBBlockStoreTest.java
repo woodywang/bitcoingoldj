@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.store;
+package org.bitcoingoldj.store;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.params.*;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.params.*;
 import org.junit.*;
 
 import java.io.*;

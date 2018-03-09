@@ -16,16 +16,16 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.script;
+package org.bitcoingoldj.script;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.core.Transaction.SigHash;
-import org.bitcoincashj.crypto.TransactionSignature;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.script.Script.VerifyFlag;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.core.Transaction.SigHash;
+import org.bitcoingoldj.crypto.TransactionSignature;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.script.Script.VerifyFlag;
 import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
@@ -42,9 +42,9 @@ import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.util.*;
 
-import static org.bitcoincashj.core.Utils.HEX;
-import static org.bitcoincashj.script.ScriptOpCodes.OP_0;
-import static org.bitcoincashj.script.ScriptOpCodes.OP_INVALIDOPCODE;
+import static org.bitcoingoldj.core.Utils.HEX;
+import static org.bitcoingoldj.script.ScriptOpCodes.OP_0;
+import static org.bitcoingoldj.script.ScriptOpCodes.OP_INVALIDOPCODE;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
 import org.junit.Before;

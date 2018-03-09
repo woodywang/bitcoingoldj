@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
-import org.bitcoincashj.core.listeners.PeerConnectedEventListener;
-import org.bitcoincashj.core.listeners.PeerDisconnectedEventListener;
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.core.Peer;
-import org.bitcoincashj.core.PeerGroup;
-import org.bitcoincashj.net.discovery.DnsDiscovery;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.utils.BriefLogFormatter;
+import org.bitcoingoldj.core.listeners.PeerConnectedEventListener;
+import org.bitcoingoldj.core.listeners.PeerDisconnectedEventListener;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.core.Peer;
+import org.bitcoingoldj.core.PeerGroup;
+import org.bitcoingoldj.net.discovery.DnsDiscovery;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

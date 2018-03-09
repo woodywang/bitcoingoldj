@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.utils;
+package org.bitcoingoldj.utils;
 
-import org.bitcoincashj.core.BlockChain;
-import org.bitcoincashj.core.Context;
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.core.StoredBlock;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.store.BlockStore;
-import org.bitcoincashj.store.BlockStoreException;
-import org.bitcoincashj.store.MemoryBlockStore;
-import org.bitcoincashj.testing.FakeTxBuilder;
+import org.bitcoingoldj.core.BlockChain;
+import org.bitcoingoldj.core.Context;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.core.StoredBlock;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.store.BlockStore;
+import org.bitcoingoldj.store.BlockStoreException;
+import org.bitcoingoldj.store.MemoryBlockStore;
+import org.bitcoingoldj.testing.FakeTxBuilder;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.testing;
+package org.bitcoingoldj.testing;
 
-import org.bitcoincashj.core.listeners.PeerDisconnectedEventListener;
-import org.bitcoincashj.core.listeners.PreMessageReceivedEventListener;
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.net.*;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.store.BlockStore;
-import org.bitcoincashj.store.MemoryBlockStore;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.listeners.PeerDisconnectedEventListener;
+import org.bitcoingoldj.core.listeners.PreMessageReceivedEventListener;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.net.*;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.store.BlockStore;
+import org.bitcoingoldj.store.MemoryBlockStore;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.Wallet;
 
 import com.google.common.util.concurrent.SettableFuture;
 

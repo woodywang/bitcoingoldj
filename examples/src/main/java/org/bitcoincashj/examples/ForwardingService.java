@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.crypto.KeyCrypterException;
-import org.bitcoincashj.kits.WalletAppKit;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.RegTestParams;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.crypto.KeyCrypterException;
+import org.bitcoingoldj.kits.WalletAppKit;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.RegTestParams;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -84,7 +84,7 @@ public class ForwardingService {
         kit.wallet().addCoinsReceivedEventListener(new WalletCoinsReceivedEventListener() {
             @Override
             public void onCoinsReceived(Wallet w, Transaction tx, Coin prevBalance, Coin newBalance) {
-                // Runs in the dedicated "user thread" (see bitcoincashj docs for more info on this).
+                // Runs in the dedicated "user thread" (see bitcoingoldj docs for more info on this).
                 //
                 // The transaction "tx" can either be pending, or included into a block (we didn't see the broadcast).
                 Coin value = tx.getValueSentToMe(w);

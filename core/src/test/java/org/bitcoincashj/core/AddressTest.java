@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.Networks;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.script.ScriptBuilder;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.Networks;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.script.ScriptBuilder;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -31,7 +31,7 @@ import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.bitcoincashj.core.Utils.HEX;
+import static org.bitcoingoldj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class AddressTest {

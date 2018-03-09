@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.protocols.channels;
+package org.bitcoingoldj.protocols.channels;
 
-import org.bitcoincashj.core.Coin;
-import org.bitcoincashj.core.TransactionBroadcaster;
-import org.bitcoincashj.core.Utils;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincash.paymentchannel.Protos;
+import org.bitcoingoldj.core.Coin;
+import org.bitcoingoldj.core.TransactionBroadcaster;
+import org.bitcoingoldj.core.Utils;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingold.paymentchannel.Protos;
 import org.easymock.Capture;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,8 +31,8 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static junit.framework.TestCase.assertTrue;
-import static org.bitcoincash.paymentchannel.Protos.TwoWayChannelMessage;
-import static org.bitcoincash.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
+import static org.bitcoingold.paymentchannel.Protos.TwoWayChannelMessage;
+import static org.bitcoingold.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
 import static org.easymock.EasyMock.*;
 import static org.junit.Assert.assertEquals;
 

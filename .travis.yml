@@ -15,5 +15,5 @@ after_success:
 
 notifications:
   irc:
-    channels: "irc.freenode.net#bitcoincashj"
+    channels: "irc.freenode.net#bitcoingoldj"
     skip_join: true

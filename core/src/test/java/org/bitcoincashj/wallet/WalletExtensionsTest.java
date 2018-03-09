@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.wallet;
+package org.bitcoingoldj.wallet;
 
-import org.bitcoincashj.testing.FooWalletExtension;
-import org.bitcoincashj.testing.TestWithWallet;
+import org.bitcoingoldj.testing.FooWalletExtension;
+import org.bitcoingoldj.testing.TestWithWallet;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

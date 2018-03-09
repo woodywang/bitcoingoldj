@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -24,24 +24,24 @@ import java.util.EnumSet;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import org.bitcoincashj.core.Coin;
-import org.bitcoincashj.core.ECKey;
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.core.ScriptException;
-import org.bitcoincashj.core.Transaction;
-import org.bitcoincashj.core.TransactionInput;
-import org.bitcoincashj.core.TransactionOutput;
-import org.bitcoincashj.core.Utils;
-import org.bitcoincashj.crypto.TransactionSignature;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.script.ScriptChunk;
-import static org.bitcoincashj.script.ScriptOpCodes.getOpCodeName;
-import org.bitcoincashj.signers.LocalTransactionSigner;
-import org.bitcoincashj.signers.TransactionSigner.ProposedTransaction;
-import org.bitcoincashj.wallet.KeyBag;
-import org.bitcoincashj.wallet.RedeemData;
+import org.bitcoingoldj.core.Coin;
+import org.bitcoingoldj.core.ECKey;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.core.ScriptException;
+import org.bitcoingoldj.core.Transaction;
+import org.bitcoingoldj.core.TransactionInput;
+import org.bitcoingoldj.core.TransactionOutput;
+import org.bitcoingoldj.core.Utils;
+import org.bitcoingoldj.crypto.TransactionSignature;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.script.ScriptChunk;
+import static org.bitcoingoldj.script.ScriptOpCodes.getOpCodeName;
+import org.bitcoingoldj.signers.LocalTransactionSigner;
+import org.bitcoingoldj.signers.TransactionSigner.ProposedTransaction;
+import org.bitcoingoldj.wallet.KeyBag;
+import org.bitcoingoldj.wallet.RedeemData;
 
 /**
  * Test case generator for transactions with low-S and high-S signatures, to

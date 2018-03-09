@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.net.discovery;
+package org.bitcoingoldj.net.discovery;
 
-import org.bitcoincashj.params.MainNetParams;
+import org.bitcoingoldj.params.MainNetParams;
 import org.junit.Test;
 
 import java.net.InetSocketAddress;

@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.net;
+package org.bitcoingoldj.net;
 
-import org.bitcoincashj.core.Utils;
+import org.bitcoingoldj.core.Utils;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
-import org.bitcoincash.paymentchannel.Protos;
-import org.bitcoincash.paymentchannel.Protos.TwoWayChannelMessage;
+import org.bitcoingold.paymentchannel.Protos;
+import org.bitcoingold.paymentchannel.Protos.TwoWayChannelMessage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

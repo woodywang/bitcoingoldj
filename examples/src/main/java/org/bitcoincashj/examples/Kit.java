@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.kits.WalletAppKit;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.listeners.KeyChainEventListener;
-import org.bitcoincashj.wallet.listeners.ScriptsChangeEventListener;
-import org.bitcoincashj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.bitcoincashj.wallet.listeners.WalletCoinsSentEventListener;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.kits.WalletAppKit;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.listeners.KeyChainEventListener;
+import org.bitcoingoldj.wallet.listeners.ScriptsChangeEventListener;
+import org.bitcoingoldj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.bitcoingoldj.wallet.listeners.WalletCoinsSentEventListener;
 
 import java.io.File;
 import java.util.List;
 
-import org.bitcoincashj.core.listeners.TransactionConfidenceEventListener;
+import org.bitcoingoldj.core.listeners.TransactionConfidenceEventListener;
 
 /**
- * The following example shows how to use the by bitcoincashj provided WalletAppKit.
- * The WalletAppKit class wraps the boilerplate (Peers, BlockChain, BlockStorage, Wallet) needed to set up a new SPV bitcoincashj app.
+ * The following example shows how to use the by bitcoingoldj provided WalletAppKit.
+ * The WalletAppKit class wraps the boilerplate (Peers, BlockChain, BlockStorage, Wallet) needed to set up a new SPV bitcoingoldj app.
  * 
  * In this example we also define a WalletEventListener class with implementors that are called when the wallet changes (for example sending/receiving money)
  */
@@ -61,7 +61,7 @@ public class Kit {
         //kit.connectToLocalHost();
 
         // Now we start the kit and sync the blockchain.
-        // bitcoincashj is working a lot with the Google Guava libraries. The WalletAppKit extends the AbstractIdleService. Have a look at the introduction to Guava services: https://github.com/google/guava/wiki/ServiceExplained
+        // bitcoingoldj is working a lot with the Google Guava libraries. The WalletAppKit extends the AbstractIdleService. Have a look at the introduction to Guava services: https://github.com/google/guava/wiki/ServiceExplained
         kit.startAsync();
         kit.awaitRunning();
 

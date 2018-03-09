@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.kits.WalletAppKit;
-import org.bitcoincashj.params.RegTestParams;
-import org.bitcoincashj.protocols.channels.*;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.WalletExtension;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.kits.WalletAppKit;
+import org.bitcoingoldj.params.RegTestParams;
+import org.bitcoingoldj.protocols.channels.*;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.WalletExtension;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.FutureCallback;
@@ -43,7 +43,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 
-import static org.bitcoincashj.core.Coin.CENT;
+import static org.bitcoingoldj.core.Coin.CENT;
 
 /**
  * Simple client that connects to the given host, opens a channel, and pays one cent.

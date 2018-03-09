@@ -20,14 +20,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.bitcoincashj</groupId>
-        <artifactId>bitcoincashj-parent</artifactId>
+        <groupId>org.bitcoingoldj</groupId>
+        <artifactId>bitcoingoldj-parent</artifactId>
         <version>0.15-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bitcoincashj-core</artifactId>
+    <artifactId>bitcoingoldj-core</artifactId>
 
-    <name>bitcoincashj</name>
+    <name>bitcoingoldj</name>
     <description>A Java Bitcoin library</description>
 
     <packaging>jar</packaging>
@@ -354,7 +354,7 @@
             <version>3.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- bitcoincashj consumers are expected to provide their own SLF4J adapters
+        <!-- bitcoingoldj consumers are expected to provide their own SLF4J adapters
              such as logback, slf4j-log4j12, slf4j-jcl and so on
              see http://www.slf4j.org/faq.html -->
         <dependency>

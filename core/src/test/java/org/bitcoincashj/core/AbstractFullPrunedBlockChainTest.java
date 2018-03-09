@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import com.google.common.collect.Lists;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.store.BlockStoreException;
-import org.bitcoincashj.store.FullPrunedBlockStore;
-import org.bitcoincashj.utils.BlockFileLoader;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.wallet.SendRequest;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.WalletTransaction;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.store.BlockStoreException;
+import org.bitcoingoldj.store.FullPrunedBlockStore;
+import org.bitcoingoldj.utils.BlockFileLoader;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.wallet.SendRequest;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.WalletTransaction;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ import java.lang.ref.WeakReference;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.bitcoincashj.core.Coin.FIFTY_COINS;
+import static org.bitcoingoldj.core.Coin.FIFTY_COINS;
 import static org.junit.Assert.*;
 import org.junit.rules.ExpectedException;
 

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.testing;
+package org.bitcoingoldj.testing;
 
 import com.google.common.base.*;
 import com.google.common.util.concurrent.*;
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.net.*;
-import org.bitcoincashj.store.*;
-import org.bitcoincashj.utils.*;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.net.*;
+import org.bitcoingoldj.store.*;
+import org.bitcoingoldj.utils.*;
 
 import java.net.*;
 import java.util.concurrent.*;

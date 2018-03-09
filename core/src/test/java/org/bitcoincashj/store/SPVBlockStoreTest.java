@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.store;
+package org.bitcoingoldj.store;
 
-import org.bitcoincashj.core.Address;
-import org.bitcoincashj.core.ECKey;
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.core.StoredBlock;
-import org.bitcoincashj.params.UnitTestParams;
+import org.bitcoingoldj.core.Address;
+import org.bitcoingoldj.core.ECKey;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.core.StoredBlock;
+import org.bitcoingoldj.params.UnitTestParams;
 import org.junit.Test;
 
 import java.io.File;

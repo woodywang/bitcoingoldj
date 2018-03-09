@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.utils;
+package org.bitcoingoldj.utils;
 
-import static org.bitcoincashj.utils.Fiat.parseFiat;
+import static org.bitcoingoldj.utils.Fiat.parseFiat;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;

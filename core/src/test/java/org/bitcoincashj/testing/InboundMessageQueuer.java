@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.testing;
+package org.bitcoingoldj.testing;
 
-import org.bitcoincashj.core.*;
+import org.bitcoingoldj.core.*;
 import com.google.common.util.concurrent.SettableFuture;
 
 import java.net.InetSocketAddress;
@@ -26,7 +26,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * An extension of {@link org.bitcoincashj.core.PeerSocketHandler} that keeps inbound messages in a queue for later processing
+ * An extension of {@link org.bitcoingoldj.core.PeerSocketHandler} that keeps inbound messages in a queue for later processing
  */
 public abstract class InboundMessageQueuer extends PeerSocketHandler {
     public final BlockingQueue<Message> inboundMessages = new ArrayBlockingQueue<>(1000);

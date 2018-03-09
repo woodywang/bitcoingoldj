@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.protocols.channels;
+package org.bitcoingoldj.protocols.channels;
 
-import org.bitcoincashj.core.Coin;
-import org.bitcoincashj.core.Sha256Hash;
-import org.bitcoincashj.core.TransactionBroadcaster;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.Coin;
+import org.bitcoingoldj.core.Sha256Hash;
+import org.bitcoingoldj.core.TransactionBroadcaster;
+import org.bitcoingoldj.wallet.Wallet;
 
 import com.google.common.base.Objects;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
-import org.bitcoincash.paymentchannel.Protos;
+import org.bitcoingold.paymentchannel.Protos;
 import org.spongycastle.crypto.params.KeyParameter;
 
 import javax.annotation.Nullable;

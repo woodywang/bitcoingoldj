@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.uri;
+package org.bitcoingoldj.uri;
 
-import org.bitcoincashj.core.Address;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.TestNet3Params;
+import org.bitcoingoldj.core.Address;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.TestNet3Params;
 import com.google.common.collect.ImmutableList;
 import org.junit.Test;
 
-import static org.bitcoincashj.core.Coin.*;
-import org.bitcoincashj.core.NetworkParameters;
+import static org.bitcoingoldj.core.Coin.*;
+import org.bitcoingoldj.core.NetworkParameters;
 import static org.junit.Assert.*;
 
 public class BitcoinURITest {

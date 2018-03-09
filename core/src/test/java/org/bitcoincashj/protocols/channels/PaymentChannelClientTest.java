@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.protocols.channels;
+package org.bitcoingoldj.protocols.channels;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.WalletExtension;
-import org.bitcoincash.paymentchannel.Protos;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.WalletExtension;
+import org.bitcoingold.paymentchannel.Protos;
 import org.easymock.Capture;
 import org.easymock.EasyMock;
 import org.junit.Before;
@@ -32,11 +32,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 
-import static org.bitcoincash.paymentchannel.Protos.TwoWayChannelMessage;
-import static org.bitcoincash.paymentchannel.Protos.TwoWayChannelMessage.MessageType.*;
-import static org.bitcoincashj.protocols.channels.PaymentChannelClient.VersionSelector.VERSION_1;
-import static org.bitcoincashj.protocols.channels.PaymentChannelClient.VersionSelector.VERSION_2;
-import static org.bitcoincashj.protocols.channels.PaymentChannelClient.VersionSelector.VERSION_2_ALLOW_1;
+import static org.bitcoingold.paymentchannel.Protos.TwoWayChannelMessage;
+import static org.bitcoingold.paymentchannel.Protos.TwoWayChannelMessage.MessageType.*;
+import static org.bitcoingoldj.protocols.channels.PaymentChannelClient.VersionSelector.VERSION_1;
+import static org.bitcoingoldj.protocols.channels.PaymentChannelClient.VersionSelector.VERSION_2;
+import static org.bitcoingoldj.protocols.channels.PaymentChannelClient.VersionSelector.VERSION_2_ALLOW_1;
 import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.replay;

@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
-import org.bitcoincashj.core.listeners.PreMessageReceivedEventListener;
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.kits.WalletAppKit;
-import org.bitcoincashj.params.RegTestParams;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.listeners.PreMessageReceivedEventListener;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.kits.WalletAppKit;
+import org.bitcoingoldj.params.RegTestParams;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.Wallet;
 
 import java.io.File;
 
-import static org.bitcoincashj.core.Coin.*;
+import static org.bitcoingoldj.core.Coin.*;
 
 /**
  * This is a little test app that waits for a coin on a local regtest node, then  generates two transactions that double

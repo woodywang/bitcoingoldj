@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.crypto;
+package org.bitcoingoldj.crypto;
 
 import org.junit.Test;
 

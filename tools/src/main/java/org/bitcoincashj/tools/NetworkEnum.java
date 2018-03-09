@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.tools;
+package org.bitcoingoldj.tools;
 
 public enum NetworkEnum {
     MAIN,

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.utils;
+package org.bitcoingoldj.utils;
 
 import com.google.protobuf.ByteString;
 import org.junit.Before;

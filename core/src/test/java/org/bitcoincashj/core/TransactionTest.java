@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import org.bitcoincashj.core.TransactionConfidence.*;
-import org.bitcoincashj.crypto.TransactionSignature;
-import org.bitcoincashj.params.*;
-import org.bitcoincashj.script.*;
-import org.bitcoincashj.testing.*;
+import org.bitcoingoldj.core.TransactionConfidence.*;
+import org.bitcoingoldj.crypto.TransactionSignature;
+import org.bitcoingoldj.params.*;
+import org.bitcoingoldj.script.*;
+import org.bitcoingoldj.testing.*;
 import org.easymock.*;
 import org.junit.*;
 
 import java.math.BigInteger;
 import java.util.*;
-import static org.bitcoincashj.core.Utils.HEX;
+import static org.bitcoingoldj.core.Utils.HEX;
 
 import static org.easymock.EasyMock.*;
 import static org.junit.Assert.*;

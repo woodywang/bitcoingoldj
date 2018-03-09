@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import com.google.common.util.concurrent.*;
-import org.bitcoincashj.core.listeners.TransactionConfidenceEventListener;
-import org.bitcoincashj.testing.*;
-import org.bitcoincashj.utils.*;
-import org.bitcoincashj.wallet.SendRequest;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.listeners.TransactionConfidenceEventListener;
+import org.bitcoingoldj.testing.*;
+import org.bitcoingoldj.utils.*;
+import org.bitcoingoldj.wallet.SendRequest;
+import org.bitcoingoldj.wallet.Wallet;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -30,8 +30,7 @@ import org.junit.runners.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-import static com.google.common.base.Preconditions.*;
-import static org.bitcoincashj.core.Coin.*;
+import static org.bitcoingoldj.core.Coin.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)

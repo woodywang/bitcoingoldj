@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.tools;
+package org.bitcoingoldj.tools;
 
-import org.bitcoincashj.core.listeners.NewBestBlockListener;
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.net.discovery.DnsDiscovery;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.RegTestParams;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.store.BlockStore;
-import org.bitcoincashj.store.MemoryBlockStore;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.utils.Threading;
+import org.bitcoingoldj.core.listeners.NewBestBlockListener;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.net.discovery.DnsDiscovery;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.RegTestParams;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.store.BlockStore;
+import org.bitcoingoldj.store.MemoryBlockStore;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.utils.Threading;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import joptsimple.OptionParser;
@@ -92,7 +92,7 @@ public class BuildCheckpoints {
                 throw new RuntimeException("Unreachable.");
         }
 
-        // Configure bitcoincashj to fetch only headers, not save them to disk, connect to a local fully synced/validated
+        // Configure bitcoingoldj to fetch only headers, not save them to disk, connect to a local fully synced/validated
         // node and to save block headers that are on interval boundaries, as long as they are <1 month old.
         final BlockStore store = new MemoryBlockStore(params);
         final BlockChain chain = new BlockChain(params, store);

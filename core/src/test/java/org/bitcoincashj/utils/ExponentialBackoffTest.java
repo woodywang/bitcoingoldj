@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.utils;
+package org.bitcoingoldj.utils;
 
-import org.bitcoincashj.core.Utils;
+import org.bitcoingoldj.core.Utils;
 
 import org.junit.Before;
 import org.junit.Test;

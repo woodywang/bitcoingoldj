@@ -20,14 +20,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.bitcoincashj</groupId>
-        <artifactId>bitcoincashj-parent</artifactId>
+        <groupId>org.bitcoingoldj</groupId>
+        <artifactId>bitcoingoldj-parent</artifactId>
         <version>0.15-SNAPSHOT</version>
     </parent>
 
     <artifactId>wallettemplate</artifactId>
 
-    <name>bitcoincashj Wallet-Template</name>
+    <name>bitcoingoldj Wallet-Template</name>
 
     <build>
         <plugins>
@@ -72,8 +72,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.bitcoincashj</groupId>
-            <artifactId>bitcoincashj-core</artifactId>
+            <groupId>org.bitcoingoldj</groupId>
+            <artifactId>bitcoingoldj-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

@@ -15,24 +15,24 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.tools;
+package org.bitcoingoldj.tools;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.crypto.*;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.RegTestParams;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.protocols.payments.PaymentProtocol;
-import org.bitcoincashj.protocols.payments.PaymentProtocolException;
-import org.bitcoincashj.protocols.payments.PaymentSession;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.store.*;
-import org.bitcoincashj.uri.BitcoinURI;
-import org.bitcoincashj.uri.BitcoinURIParseException;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.wallet.DeterministicSeed;
-import org.bitcoincashj.wallet.DeterministicUpgradeRequiredException;
-import org.bitcoincashj.wallet.DeterministicUpgradeRequiresPassword;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.crypto.*;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.RegTestParams;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.protocols.payments.PaymentProtocol;
+import org.bitcoingoldj.protocols.payments.PaymentProtocolException;
+import org.bitcoingoldj.protocols.payments.PaymentSession;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.store.*;
+import org.bitcoingoldj.uri.BitcoinURI;
+import org.bitcoingoldj.uri.BitcoinURIParseException;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.wallet.DeterministicSeed;
+import org.bitcoingoldj.wallet.DeterministicUpgradeRequiredException;
+import org.bitcoingoldj.wallet.DeterministicUpgradeRequiresPassword;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
@@ -45,19 +45,19 @@ import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import joptsimple.util.DateConverter;
 
-import org.bitcoincashj.core.listeners.BlocksDownloadedEventListener;
-import org.bitcoincashj.core.listeners.DownloadProgressTracker;
-import org.bitcoincashj.wallet.MarriedKeyChain;
-import org.bitcoincashj.wallet.Protos;
-import org.bitcoincashj.wallet.SendRequest;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.WalletExtension;
-import org.bitcoincashj.wallet.WalletProtobufSerializer;
-import org.bitcoincashj.wallet.Wallet.BalanceType;
-import org.bitcoincashj.wallet.listeners.WalletChangeEventListener;
-import org.bitcoincashj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.bitcoincashj.wallet.listeners.WalletCoinsSentEventListener;
-import org.bitcoincashj.wallet.listeners.WalletReorganizeEventListener;
+import org.bitcoingoldj.core.listeners.BlocksDownloadedEventListener;
+import org.bitcoingoldj.core.listeners.DownloadProgressTracker;
+import org.bitcoingoldj.wallet.MarriedKeyChain;
+import org.bitcoingoldj.wallet.Protos;
+import org.bitcoingoldj.wallet.SendRequest;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.WalletExtension;
+import org.bitcoingoldj.wallet.WalletProtobufSerializer;
+import org.bitcoingoldj.wallet.Wallet.BalanceType;
+import org.bitcoingoldj.wallet.listeners.WalletChangeEventListener;
+import org.bitcoingoldj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.bitcoingoldj.wallet.listeners.WalletCoinsSentEventListener;
+import org.bitcoingoldj.wallet.listeners.WalletReorganizeEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -80,7 +80,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 
-import static org.bitcoincashj.core.Coin.parseCoin;
+import static org.bitcoingoldj.core.Coin.parseCoin;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
@@ -104,7 +104,7 @@ public class WalletTool {
     private static File chainFileName;
     private static ValidationMode mode;
     private static String password;
-    private static org.bitcoincash.protocols.payments.Protos.PaymentRequest paymentRequest;
+    private static org.bitcoingold.protocols.payments.Protos.PaymentRequest paymentRequest;
     private static OptionSpec<Integer> lookaheadSize;
 
     public static class Condition {
@@ -1028,7 +1028,7 @@ public class WalletTool {
                 System.exit(1);
             }
             try {
-                paymentRequest = org.bitcoincash.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
+                paymentRequest = org.bitcoingold.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
             } catch(IOException e) {
                 System.err.println("Failed to parse payment request from file " + e.getMessage());
                 System.exit(1);

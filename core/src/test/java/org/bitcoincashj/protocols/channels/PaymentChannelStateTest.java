@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.protocols.channels;
+package org.bitcoingoldj.protocols.channels;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.script.Script;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.testing.TestWithWallet;
-import org.bitcoincashj.wallet.SendRequest;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.script.Script;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.testing.TestWithWallet;
+import org.bitcoingoldj.wallet.SendRequest;
+import org.bitcoingoldj.wallet.Wallet;
 
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -40,9 +40,9 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.testing.FakeTxBuilder.createFakeTx;
-import static org.bitcoincashj.testing.FakeTxBuilder.makeSolvedTestBlock;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.testing.FakeTxBuilder.createFakeTx;
+import static org.bitcoingoldj.testing.FakeTxBuilder.makeSolvedTestBlock;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)

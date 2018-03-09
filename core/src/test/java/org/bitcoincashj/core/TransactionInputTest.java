@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 import java.util.List;
 
-import org.bitcoincashj.params.UnitTestParams;
-import org.bitcoincashj.script.ScriptBuilder;
-import org.bitcoincashj.testing.FakeTxBuilder;
-import org.bitcoincashj.wallet.AllowUnconfirmedCoinSelector;
-import org.bitcoincashj.wallet.SendRequest;
-import org.bitcoincashj.wallet.Wallet;
+import org.bitcoingoldj.params.UnitTestParams;
+import org.bitcoingoldj.script.ScriptBuilder;
+import org.bitcoingoldj.testing.FakeTxBuilder;
+import org.bitcoingoldj.wallet.AllowUnconfirmedCoinSelector;
+import org.bitcoingoldj.wallet.SendRequest;
+import org.bitcoingoldj.wallet.Wallet;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;

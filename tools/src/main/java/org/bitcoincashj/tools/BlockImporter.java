@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.tools;
+package org.bitcoingoldj.tools;
 
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.store.*;
-import org.bitcoincashj.utils.BlockFileLoader;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.store.*;
+import org.bitcoingoldj.utils.BlockFileLoader;
 import com.google.common.base.Preconditions;
 
 import java.io.File;
 
-/** Very thin wrapper around {@link org.bitcoincashj.utils.BlockFileLoader} */
+/** Very thin wrapper around {@link org.bitcoingoldj.utils.BlockFileLoader} */
 public class BlockImporter {
     public static void main(String[] args) throws BlockStoreException, VerificationException, PrunedException {
         System.out.println("USAGE: BlockImporter (prod|test) (H2|Disk|MemFull|Mem|SPV) [blockStore]");
         System.out.println("       blockStore is required unless type is Mem or MemFull");
-        System.out.println("       eg BlockImporter prod H2 /home/user/bitcoincashj.h2store");
+        System.out.println("       eg BlockImporter prod H2 /home/user/bitcoingoldj.h2store");
         System.out.println("       Does full verification if the store supports it");
         Preconditions.checkArgument(args.length == 2 || args.length == 3);
         

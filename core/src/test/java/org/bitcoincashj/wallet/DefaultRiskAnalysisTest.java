@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.wallet;
+package org.bitcoingoldj.wallet;
 
 import com.google.common.collect.*;
-import org.bitcoincashj.core.*;
-import org.bitcoincashj.crypto.*;
-import org.bitcoincashj.params.*;
-import org.bitcoincashj.script.*;
-import org.bitcoincashj.testing.FakeTxBuilder;
-import org.bitcoincashj.wallet.DefaultRiskAnalysis.*;
+import org.bitcoingoldj.core.*;
+import org.bitcoingoldj.crypto.*;
+import org.bitcoingoldj.params.*;
+import org.bitcoingoldj.script.*;
+import org.bitcoingoldj.testing.FakeTxBuilder;
+import org.bitcoingoldj.wallet.DefaultRiskAnalysis.*;
 import org.junit.*;
 
 import java.util.*;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.script.ScriptOpCodes.*;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.script.ScriptOpCodes.*;
 import static org.junit.Assert.*;
 
 public class DefaultRiskAnalysisTest {

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
 import com.google.common.collect.*;
-import org.bitcoincashj.core.listeners.*;
-import org.bitcoincashj.params.TestNet3Params;
-import org.bitcoincashj.testing.FakeTxBuilder;
-import org.bitcoincashj.testing.InboundMessageQueuer;
-import org.bitcoincashj.testing.TestWithNetworkConnections;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.Wallet;
-import org.bitcoincashj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.bitcoingoldj.core.listeners.*;
+import org.bitcoingoldj.params.TestNet3Params;
+import org.bitcoingoldj.testing.FakeTxBuilder;
+import org.bitcoingoldj.testing.InboundMessageQueuer;
+import org.bitcoingoldj.testing.TestWithNetworkConnections;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.Wallet;
+import org.bitcoingoldj.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
@@ -52,8 +52,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.testing.FakeTxBuilder.*;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.testing.FakeTxBuilder.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)

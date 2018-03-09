@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.examples;
+package org.bitcoingoldj.examples;
 
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.params.MainNetParams;
-import org.bitcoincashj.params.RegTestParams;
-import org.bitcoincashj.params.TestNet3Params;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.params.MainNetParams;
+import org.bitcoingoldj.params.RegTestParams;
+import org.bitcoingoldj.params.TestNet3Params;
 
 public enum NetworkEnum {
     MAIN,

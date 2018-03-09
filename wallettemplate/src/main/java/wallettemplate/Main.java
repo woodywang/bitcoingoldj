@@ -18,12 +18,12 @@ package wallettemplate;
 
 import com.google.common.util.concurrent.*;
 import javafx.scene.input.*;
-import org.bitcoincashj.core.NetworkParameters;
-import org.bitcoincashj.kits.WalletAppKit;
-import org.bitcoincashj.params.*;
-import org.bitcoincashj.utils.BriefLogFormatter;
-import org.bitcoincashj.utils.Threading;
-import org.bitcoincashj.wallet.DeterministicSeed;
+import org.bitcoingoldj.core.NetworkParameters;
+import org.bitcoingoldj.kits.WalletAppKit;
+import org.bitcoingoldj.params.*;
+import org.bitcoingoldj.utils.BriefLogFormatter;
+import org.bitcoingoldj.utils.Threading;
+import org.bitcoingoldj.wallet.DeterministicSeed;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -100,7 +100,7 @@ public class Main extends Application {
 
         // Make log output concise.
         BriefLogFormatter.init();
-        // Tell bitcoincashj to run event handlers on the JavaFX UI thread. This keeps things simple and means
+        // Tell bitcoingoldj to run event handlers on the JavaFX UI thread. This keeps things simple and means
         // we cannot forget to switch threads when adding event handlers. Unfortunately, the DownloadListener
         // we give to the app kit is currently an exception and runs on a library thread. It'll get fixed in
         // a future version.

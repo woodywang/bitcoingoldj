@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.crypto;
+package org.bitcoingoldj.crypto;
 
-import org.bitcoincashj.core.Utils;
-import org.bitcoincashj.utils.BriefLogFormatter;
+import org.bitcoingoldj.core.Utils;
+import org.bitcoingoldj.utils.BriefLogFormatter;
 import com.google.protobuf.ByteString;
 
-import org.bitcoincashj.wallet.Protos;
-import org.bitcoincashj.wallet.Protos.ScryptParameters;
+import org.bitcoingoldj.wallet.Protos;
+import org.bitcoingoldj.wallet.Protos.ScryptParameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;

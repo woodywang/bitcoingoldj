@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.bitcoincashj.core;
+package org.bitcoingoldj.core;
 
-import static org.bitcoincashj.core.Coin.*;
-import static org.bitcoincashj.core.NetworkParameters.MAX_MONEY;
+import static org.bitcoingoldj.core.Coin.*;
+import static org.bitcoingoldj.core.NetworkParameters.MAX_MONEY;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
