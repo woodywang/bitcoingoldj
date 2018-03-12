@@ -21,7 +21,7 @@
 
   <groupId>org.bitcoingoldj</groupId>
   <artifactId>bitcoingoldj-parent</artifactId>
-  <version>0.15-SNAPSHOT</version>
+  <version>0.15</version>
   <packaging>pom</packaging>
 
   <modules>
